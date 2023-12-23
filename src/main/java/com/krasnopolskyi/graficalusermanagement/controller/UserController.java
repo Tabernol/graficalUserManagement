@@ -6,8 +6,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-
 import java.sql.SQLException;
+
 
 public class UserController {
 
@@ -20,7 +20,6 @@ public class UserController {
     private TextField name;
     @FXML
     private PasswordField password;
-
     @FXML
     protected void sendFormToRegister() {
         try {

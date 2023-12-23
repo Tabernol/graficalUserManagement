@@ -11,7 +11,7 @@ import java.util.Optional;
 
 public class UserRepository {
     public int save(Long id, String name, String password) throws SQLException {
-        String sql = "insert into users (id, name, password) values(?,?,?)";
+        String sql = "INSERT INTO users (id, name, password) VALUES (?,?,?)";
         try (Connection con = MyDataSource.getConnection();
              PreparedStatement pst = con.prepareStatement(sql)) {
             pst.setLong(1, id);
@@ -19,12 +19,12 @@ public class UserRepository {
             pst.setString(3, password);
             return pst.executeUpdate();
         } catch (SQLException e) {
-            throw new SQLException("Something went wrong");
+            throw new SQLException("Sorry, but something went wrong.");
         }
     }
 
     public boolean isIdExist(Long id) throws SQLException {
-        String sql = "select * from users where id=?";
+        String sql = "SELECT * FROM users WHERE id=?";
         try (Connection con = MyDataSource.getConnection();
              PreparedStatement pst = con.prepareStatement(sql)) {
             pst.setLong(1, id);
@@ -33,7 +33,7 @@ public class UserRepository {
             resultSet.close();
             return isExist;
         } catch (SQLException e) {
-            throw new SQLException("Sorry something went wrong");
+            throw new SQLException("Sorry, but something went wrong.");
         }
     }
 
@@ -49,7 +49,7 @@ public class UserRepository {
             resultSet.close();
             return Optional.of(user);
         } catch (SQLException e) {
-            throw new SQLException("Something went wrong");
+            throw new SQLException("Sorry, but something went wrong.");
         }
     }
 }

@@ -19,6 +19,7 @@ public class UserService {
 
     public String save(User user, byte[] bytes) throws SQLException {
         try {
+            Validator.validateId(user.getId());
             Validator.validateName(user.getName());
             Validator.validatePassword(bytes);
         } catch (ValidationException e) {
