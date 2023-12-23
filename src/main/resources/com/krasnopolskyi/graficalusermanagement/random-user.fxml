@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.krasnopolskyi.graficalusermanagement.controller.RandomUserController"
+            prefHeight="400.0" prefWidth="600.0">
+    <Button onAction="#showRandomUser" text="Show Random User"
+            AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
+    <Label fx:id="showUser" layoutX="106.0"
+           layoutY="66.0" prefHeight="142.0"
+           prefWidth="338.0" AnchorPane.leftAnchor="50.0"
+           AnchorPane.topAnchor="60.0" />
+</AnchorPane>
