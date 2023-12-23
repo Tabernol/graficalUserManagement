@@ -47,7 +47,7 @@ public class UserRepository {
                 user = new User(resultSet.getLong("id"), resultSet.getString("name"));
             }
             resultSet.close();
-            return Optional.of(user);
+            return Optional.ofNullable(user);
         } catch (SQLException e) {
             throw new SQLException("Sorry, but something went wrong.");
         }

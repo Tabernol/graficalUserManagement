@@ -16,6 +16,8 @@ public class RandomUserController {
         try {
             if (userService.getRandom().isPresent()) {
                 showUser.setText(userService.getRandom().get().toString());
+            } else {
+                showUser.setText("It seems that there is no user");
             }
         } catch (SQLException e) {
             showUser.setText(e.getMessage());
