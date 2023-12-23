@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 
 public class RandomUserController {
-    private UserService userService = new UserService();
+    private final UserService userService = new UserService();
     @FXML
     private Label showUser;
 

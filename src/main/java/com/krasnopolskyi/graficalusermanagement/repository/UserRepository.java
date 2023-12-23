@@ -19,7 +19,7 @@ public class UserRepository {
             pst.setString(3, password);
             return pst.executeUpdate();
         } catch (SQLException e) {
-            throw new SQLException("Sorry, but something went wrong.");
+            throw new SQLException("Sorry, but something went wrong");
         }
     }
 

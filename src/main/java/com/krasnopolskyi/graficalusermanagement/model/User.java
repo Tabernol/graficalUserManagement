@@ -1,8 +1,8 @@
 package com.krasnopolskyi.graficalusermanagement.model;
 
 public class User {
-    private Long id;
-    private String name;
+    private final Long id;
+    private final String name;
 
     public User(Long id, String name) {
         this.id = id;

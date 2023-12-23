@@ -10,7 +10,7 @@ import java.util.Base64;
 import java.util.Optional;
 
 public class UserService {
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
     public UserService() {
         this.userRepository = new UserRepository();
@@ -31,7 +31,7 @@ public class UserService {
         }
         // there must be a better coder here, but this is just an example
         String encodedPassword = Base64.getEncoder().encodeToString(bytes);
-        userRepository.save(user.getId(), user.getName(), encodedPassword);
+        userRepository.save(user.getId(), user.getName().trim(), encodedPassword);
         return "User has saved successfully.";
     }
 

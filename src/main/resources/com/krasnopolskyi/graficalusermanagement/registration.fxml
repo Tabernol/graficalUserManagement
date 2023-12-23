@@ -10,7 +10,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.krasnopolskyi.graficalusermanagement.controller.UserController">
+<AnchorPane prefHeight="400.0"
+            prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.krasnopolskyi.graficalusermanagement.controller.UserController">
     <Label alignment="CENTER" contentDisplay="CENTER" text="Enter your details to register" textAlignment="CENTER" AnchorPane.leftAnchor="40.0">
         <font>
             <Font size="18.0" />
